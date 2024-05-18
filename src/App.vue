@@ -3,7 +3,8 @@
 </script>
 
 <template>
-  <el-button type="success">Success</el-button>
+  <!-- 一级路由出口组件 -->
+  <router-view />
 </template>
 
 <style scoped>
