@@ -1,12 +1,12 @@
 <script setup>
-  import getCategoryAPI from 'src/apis/layout.js'
+  import { getCategoryAPI } from '@/apis/layout'
   import {onMounted, ref } from 'vue'
 
   const categoryList = ref([])
-  const getCategory = async() => {
+  const getCategory = async () => {
     const res = await getCategoryAPI()
     console.log(res)
-    categoryList.value = res.data
+    categoryList.value = res.result
   }
 
   onMounted(() => {
